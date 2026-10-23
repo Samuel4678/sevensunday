@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seven Sunday Company Ltd · Roofing Materials &amp; Insulation, Athi River</title>
+<meta name="description" content="Seven Sunday Company Ltd supplies roofing materials in Athi River, Kenya: iron sheets, stone-coated tiles, ridges, gutters, fasteners, insulation and trusses. Use our roof calculator and request a quote.">
+<meta name="theme-color" content="#0f5c4a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="top"><span id="tLoc"></span><span><span id="tContact"></span><a id="tDir" target="_blank" rel="noopener">Get directions</a></span></div>
+<header id="nav">
+  <a class="logo" href="#home" aria-label="Seven Sunday home"><svg viewBox="0 0 44 44" width="40" height="40" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#0f5c4a"/><circle cx="22" cy="25" r="6" fill="#ffb347"/><path d="M22 10v4M11 14l3 3M33 14l-3 3M7 25h4M33 25h4" stroke="#ffb347" stroke-width="2.4" stroke-linecap="round"/><path d="M8 34L22 22l14 12" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>SEVEN SUNDAY</b><small>ROOFING MATERIALS</small></span></a>
+  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('menu')">☰</button>
+  <nav onclick="document.body.classList.remove('menu')">
+    <a href="#products">Products</a><a href="#guide">Roof Guide</a><a href="#calculator">Calculator</a><a href="#process">How It Works</a><a href="#faq">FAQ</a><a href="#find">Find Us</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="qbtn" onclick="Quote.open()">Quote <b id="qCount">0</b></button>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-art" id="heroArt" role="img" aria-label="Illustration of a house with a green roof under the sun"></div>
+  <div class="shade"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow">Athi River · Roofing materials · Insulation</p>
+    <h1>Everything for<br><em>a roof that lasts.</em></h1>
+    <p class="lead">Iron sheets, stone-coated tiles, ridges, gutters, fasteners and insulation, supplied for homes, estates and commercial builds. Measure your roof, build your list and get a quote in minutes.</p>
+    <div class="cta"><a class="btn" href="#calculator">Roof calculator</a><a class="btn ghost" href="#products">Browse materials</a></div>
+    <ul class="pills"><li>Iron sheets</li><li>Stone-coated tiles</li><li>Insulation</li><li>Gutters &amp; accessories</li></ul>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="products" class="wrap sec"><p class="eyebrow dk c">Our range</p><h2 class="c">Roofing materials</h2><p class="sub c">Everything for the roof, from the first sheet to the last screw. Tap “Add to quote” to build your list.</p>
+  <div class="filters" id="filters"></div><div class="grid" id="pGrid"></div></section>
+
+<section id="guide" class="band"><div class="wrap sec"><p class="eyebrow dk c">Choosing a roof</p><h2 class="c">Which roofing is right for you?</h2><p class="sub c">A quick guide to the most common options in Kenya.</p>
+  <div class="tw"><table class="cmp"><thead><tr><th></th><th>Iron sheets (mabati)</th><th>Stone-coated tiles</th><th>With insulation</th></tr></thead><tbody>
+   <tr><th>Best for</th><td>Homes, farms, commercial and industrial roofs</td><td>Homes that want a tiled look with a light steel structure</td><td>Any roof where heat, noise or condensation is a problem</td></tr>
+   <tr><th>Weight</th><td>Light</td><td>Light compared with clay or concrete tiles</td><td>Adds very little load</td></tr>
+   <tr><th>Look</th><td>Clean, many profiles and colours</td><td>Classic tile appearance</td><td>Hidden under the sheets or ceiling</td></tr>
+   <tr><th>Installation</th><td>Fast; large sheets cover quickly</td><td>Quick on a suitable steel or timber frame</td><td>Fitted under sheets or tiles</td></tr>
+   <tr><th>Tip</th><td>Choose a gauge and coating suited to your location</td><td>Check the frame and spacing with your fundi</td><td>Reduces rain noise and indoor heat</td></tr></tbody></table></div>
+  <div class="benefits" id="benefits"></div>
+</div></section>
+
+<section id="calculator" class="wrap sec calc">
+  <div><p class="eyebrow dk">Plan your roof</p><h2>Roof calculator</h2><p class="sub">Enter your building size and roof pitch to estimate how many sheets, how much ridge capping and gutter you need. This is an estimate for a standard two-slope (gable) roof. Always confirm measurements on site.</p>
+   <form id="cf" class="cform">
+    <label>Building length (m)<input type="number" id="cl" min="2" step="0.1" value="10"></label>
+    <label>Building width (m)<input type="number" id="cw" min="2" step="0.1" value="7"></label>
+    <label>Roof pitch<select id="cp"><option value="10">Low (10°)</option><option value="15" selected>Medium (15°)</option><option value="20">Steep (20°)</option><option value="25">Very steep (25°)</option><option value="30">Extra steep (30°)</option></select></label>
+    <label>Eaves overhang (m)<input type="number" id="co" min="0" step="0.05" value="0.45"></label>
+    <label>Sheet length<select id="cs"><option value="2">2.0 m</option><option value="2.5">2.5 m</option><option value="3" selected>3.0 m</option><option value="3.5">3.5 m</option><option value="4">4.0 m</option></select></label>
+    <label>Sheet cover width (m)<input type="number" id="cc" min="0.3" step="0.01" value="0.8"></label>
+   </form></div>
+  <div class="result" id="cres"></div>
+</section>
+
+<section id="process" class="band"><div class="wrap sec"><p class="eyebrow dk c">Simple process</p><h2 class="c">From measurements to delivery</h2><ol class="steps" id="steps"></ol></div></section>
+
+<section id="why" class="dark"><div class="wrap sec"><p class="eyebrow c">Why Seven Sunday</p><h2 class="c">One supplier for the whole roof</h2><div class="grid3" id="whyGrid"></div></div></section>
+
+<section id="faq" class="wrap sec narrow"><p class="eyebrow dk c">Good to know</p><h2 class="c">Roofing questions, answered</h2><div id="faqList"></div></section>
+
+<section id="find" class="band"><div class="wrap sec"><p class="eyebrow dk c">Find us</p><h2 class="c">Visit us in Athi River</h2><p class="sub c">Open the map for directions, or browse photos of our location and materials.</p>
+  <div class="findgrid"><div class="mapbox rv"><iframe id="mapf" title="Seven Sunday Company Ltd on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="mapbar"><a class="btn sm" id="mDir" target="_blank" rel="noopener">Get directions</a><a class="btn sm ghost" id="mOpen" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
+  <div class="mgal" id="mgal"></div></div></div></section>
+
+<section id="contact" class="wrap sec split">
+  <div class="rv"><p class="eyebrow dk">Get a quote</p><h2>Tell us what you need</h2><p class="sub">Send your product list and site details. We'll reply with availability and pricing.</p><div id="cInfo"></div></div>
+  <form class="card rv" onsubmit="return Quote.sendForm(event)"><h3>Request a quote</h3><div id="formItems" class="items"></div>
+    <input id="fn" placeholder="Your name" required><input id="fp" placeholder="Phone number" required><input id="fl" placeholder="Delivery location (town / site)">
+    <textarea id="fm" rows="3" placeholder="Quantities, colours, gauge, delivery date…"></textarea><button class="btn">Send request</button></form>
+</section>
+
+<footer><div class="wrap fgrid"><div><b class="flogo">SEVEN SUNDAY</b><p>Seven Sunday Company Ltd<br>Roofing materials and insulation, Athi River, Kenya.</p></div><div><b>Explore</b><a href="#products">Materials</a><a href="#guide">Roof guide</a><a href="#calculator">Calculator</a><a href="#faq">FAQ</a></div><div><b>Contact</b><a href="#contact">Request a quote</a><a id="fDir" target="_blank" rel="noopener">Directions</a></div></div><p class="copy">© <span id="yr"></span> Seven Sunday Company Ltd. All rights reserved.</p></footer>
+
+<aside id="drawer" aria-label="Quote list"><div class="dh"><b>Your quote list</b><button onclick="Quote.close()" aria-label="Close">×</button></div><div id="dItems" class="di"></div><div class="df"><button class="btn" onclick="Quote.toForm()">Continue to request</button></div></aside>
+<div id="scrim" onclick="Quote.close()"></div>
+<div id="fab"></div><button id="top" aria-label="Back to top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div id="lb" onclick="this.classList.remove('on')"><div id="lbc"></div><button aria-label="Close">×</button></div>
+<script src="app.js"></script>
+</body></html>
